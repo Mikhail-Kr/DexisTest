@@ -1,8 +1,8 @@
-package GroupMethods;
+package groupMethods;
 
-import Models.CheckerGroups;
-import Models.Group;
-import Models.Point;
+import models.CheckerGroups;
+import models.Group;
+import models.Point;
 
 import java.util.ArrayList;
 import java.util.Arrays;

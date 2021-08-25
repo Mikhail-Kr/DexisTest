@@ -1,5 +1,5 @@
-import GroupMethods.GroupMethods;
-import Models.*;
+import groupMethods.GroupMethods;
+import models.*;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -24,21 +24,11 @@ public class Main {
         String[] params = Arrays.copyOfRange(commandParts, 1, commandParts.length);
 
         switch (commandParts[0]) {
-          case "add":
-            groupsManager.add(parseAddingInput(params));
-            break;
-          case "print":
-            consoleUI.print(Arrays.stream(params).mapToInt(Integer::parseInt).toArray());
-            break;
-          case "remove":
-            groupsManager.remove(Arrays.stream(params).mapToInt(Integer::parseInt).toArray());
-            break;
-          case "clear":
-            groupsManager.clear();
-            break;
-          case "help":
-            consoleUI.help();
-            break;
+          case "add" -> groupsManager.add(parseAddingInput(params));
+          case "print" -> consoleUI.print(Arrays.stream(params).mapToInt(Integer::parseInt).toArray());
+          case "remove" -> groupsManager.remove(Arrays.stream(params).mapToInt(Integer::parseInt).toArray());
+          case "clear" -> groupsManager.clear();
+          case "help" -> consoleUI.help();
         }
       } catch (NumberFormatException e) {
         System.err.println("Неправильный тип параметров: ожидается целочисленное выражение");

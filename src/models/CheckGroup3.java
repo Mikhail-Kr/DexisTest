@@ -1,13 +1,13 @@
-package Models;
+package models;
 
-public class CheckGroup1 implements CheckerGroups{
+public class CheckGroup3 implements CheckerGroups{
   /**
    * @param point точка с координатами x, y
    * @return Boolean
    */
   @Override
   public boolean check(Point point) {
-    return point.x <= point.y;
+    return Math.pow(point.x, 3) <= point.y;
   }
 
   /**
@@ -15,6 +15,6 @@ public class CheckGroup1 implements CheckerGroups{
    */
   @Override
   public String groupMember() {
-    return "Принадлежит группе 1";
+    return "Принадлежит группе 3";
   }
 }
