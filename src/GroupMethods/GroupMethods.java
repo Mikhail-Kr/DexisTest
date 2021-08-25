@@ -18,6 +18,9 @@ public class GroupMethods {
     this.noGroup = new ArrayList<>();
   }
 
+  /**
+   * @param points
+   */
   public void add(Point[] points) {
     for (Point point : points) {
       boolean wasAdded = false;
@@ -30,6 +33,9 @@ public class GroupMethods {
     }
   }
 
+  /**
+   * @return список групп
+   */
   public List<Group> getGroups() {
     return Arrays.asList(groups.clone());
   }
@@ -43,6 +49,9 @@ public class GroupMethods {
     return result;
   }
 
+  /**
+   * @return точки без группы
+   */
   public List<Point> getNoGroup() {
     return noGroup;
   }
@@ -60,6 +69,9 @@ public class GroupMethods {
     }
   }
 
+  /**
+   * @param groupNum
+   */
   private void assertGroupNum(int groupNum) {
     if (1 <= groupNum && groupNum <= groups.length) {
       return;
